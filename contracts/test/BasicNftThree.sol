@@ -3,14 +3,14 @@ pragma solidity ^0.8.7;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract BasicNftTwo is ERC721 {
+contract BasicNftThree is ERC721 {
     string public constant TOKEN_URI =
-        "https://bafkreiewwnx2soeecskv5cmyqhm77whwofdus2cdkokszu5knbfgkwfbgq.ipfs.nftstorage.link";
+        "https://bafkreihkqdajsxoihobjl3numvn4747xytxjiztyfmxpn4g33un3rjgfpu.ipfs.nftstorage.link";
     uint256 private s_tokenCounter;
 
     event DogMinted(uint256 indexed tokenId);
 
-    constructor() ERC721("Dogie", "DOG") {
+    constructor() ERC721("St-bernard", "SBR") {
         s_tokenCounter = 0;
     }
 

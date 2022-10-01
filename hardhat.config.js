@@ -10,7 +10,7 @@ require("dotenv").config()
  * @type import('hardhat/config').HardhatUserConfig
  */
 
-const MAINNET_RPC_URL = process.env.MAINNET_RPC_URL
+const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
 const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 // optional
@@ -43,6 +43,16 @@ module.exports = {
             chainId: 4,
             blockConfirmation: 6,
             gas: 400000,
+        },
+        goerli: {
+            url: GOERLI_RPC_URL,
+            accounts: [PRIVATE_KEY],
+            //   accounts: {
+            //     mnemonic: MNEMONIC,
+            //   },
+            saveDeployments: true,
+            chainId: 5,
+            blockConfirmation: 6,
         },
     },
     etherscan: {

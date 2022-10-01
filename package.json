@@ -6,7 +6,14 @@
     "lint": "solhint 'contracts/*.sol'",
     "lint:fix": "solhint 'contracts/**/*.sol' --fix",
     "format": "prettier --write .",
-    "coverage": "hardhat coverage"
+    "coverage": "hardhat coverage",
+    "mint-list1": "hardhat run scripts/mint-and-list.js --network goerli",
+    "mint-list2": "hardhat run scripts/mint-and-list-2.js --network goerli",
+    "mint-list3": "hardhat run scripts/mint-and-list-3.js --network goerli",
+    "mint1": "hardhat run scripts/mint.js --network goerli",
+    "mint2": "hardhat run scripts/mint-2.js --network goerli",
+    "mint3": "hardhat run scripts/mint-3.js --network goerli",
+    "deploy": "hardhat deploy --network goerli"
   },
   "devDependencies": {
     "@chainlink/contracts": "^0.4.0",
@@ -32,6 +39,9 @@
     "timeout": 10000000
   },
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "mime": "^3.0.0",
+    "nft.storage": "^7.0.0",
+    "path": "^0.12.7"
   }
 }
